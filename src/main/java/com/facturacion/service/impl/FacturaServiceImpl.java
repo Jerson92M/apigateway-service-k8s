@@ -20,7 +20,7 @@ public class FacturaServiceImpl implements IFacturaService{
 	@Override
 	public ResponseEntity<?> add(String factura) {
 		
-		final String uri = "http://facturas-service/facturas";
+		final String uri = "http://facturas-service:8083/facturas";
 
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);

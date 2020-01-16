@@ -25,9 +25,9 @@ public class ProductoServiceImpl implements IProductoService {
 		String uri;
 		
 		if (codigo == null || codigo.isEmpty()) {
-			uri = "http://productos-service/productos";
+			uri = "http://productos-service:8082/productos";
 		} else {
-			uri = "http://productos-service/productos?codigo="+codigo;
+			uri = "http://productos-service:8082/productos?codigo="+codigo;
 		}
 
 		HttpHeaders headers = new HttpHeaders();
@@ -40,7 +40,7 @@ public class ProductoServiceImpl implements IProductoService {
 	@Override
 	public ResponseEntity<?> add(String producto) {
 		
-		final String uri = "http://productos-service/productos";
+		final String uri = "http://productos-service:8082/productos";
 
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
@@ -52,7 +52,7 @@ public class ProductoServiceImpl implements IProductoService {
 	@Override
 	public ResponseEntity<?> update(Integer id, String producto) {
 		
-		final String uri = "http://productos-service/productos/"+id;
+		final String uri = "http://productos-service:8082/productos/"+id;
 
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
@@ -64,7 +64,7 @@ public class ProductoServiceImpl implements IProductoService {
 	@Override
 	public ResponseEntity<?> delete(Integer id) {
 		
-		final String uri = "http://productos-service/productos/"+id;
+		final String uri = "http://productos-service:8082/productos/"+id;
 
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);

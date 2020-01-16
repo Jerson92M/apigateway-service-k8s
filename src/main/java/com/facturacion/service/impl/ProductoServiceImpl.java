@@ -23,7 +23,7 @@ public class ProductoServiceImpl implements IProductoService {
 	public ResponseEntity<?> getAll(String codigo) {
 
 		String uri;
-		
+		String f;
 		if (codigo == null || codigo.isEmpty()) {
 			uri = "http://productos-service:8082/productos";
 		} else {
